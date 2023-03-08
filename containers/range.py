@@ -20,7 +20,7 @@ def range(*args):
     That's fairly difficult to do, however, and it's much easier to just implement this function normally using the yield syntax.
 
     NOTE:
-    For efficiency reasons, Python's built-in range object is written in the C programming language rather than natively in python.
+    For efficiency reasons,, Python's built-in range object is written in the C programming language rather than natively in python.
     You can find the source code online at https://hg.python.org/cpython/file/ee7b713fec71/Objects/rangeobject.c
     The link takes you to a file that is 1445 lines long,
     and all it does is implement this simple functionality.
