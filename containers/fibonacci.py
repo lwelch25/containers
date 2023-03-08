@@ -108,15 +108,15 @@ class FibIter:
 
 def fib_yield(n=None):
     yield 1
-    i = 1
     zero = 0
     one = 1
+    i = 1
     while (n is None) or (i < n):
         two = one + zero
         zero = one
         one = two
         i += 1
-        yield 2
+        yield two
 
     '''
     This function returns a generator that computes the
