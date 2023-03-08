@@ -108,7 +108,7 @@ class FibIter:
 
 def fib_yield(n=None):
     yield 1
-    i = 0
+    i = 1
     zero = 0
     one = 1
     while (n is None) or (i < n):
