@@ -1,4 +1,8 @@
-def range(a, b=None, c=None):
+import builtins
+
+def range(*args):
+    for i in builtins.range(*args):
+        yield i
     '''
     This function should behave exactly like the built-in range function.
     For example:
