@@ -28,6 +28,19 @@ class BST(BinaryTree):
         '''
         return type(self).__name__ + '(' + str(self.to_list('inorder')) + ')'
 
+    def __iter__(self):
+        self.index = 0
+        self.list = self.to_list('inorder')
+        return self
+
+    def __next__(self):
+        if self.index < super().__len__():
+            value = self.list[self.index]
+            self.index += 1
+            return value
+        else:
+            raise StopIteration()
+
     def __eq__(self, t2):
         '''
         This method checks to see if the contents of self and t2 are equal.
@@ -43,6 +56,9 @@ class BST(BinaryTree):
         Convert the contents of both trees into a sorted list,
         then compare those sorted lists for equality.
         '''
+        self_list = self.to_list('inorder')
+        t2_list = t2.to_list('inorder')
+        return sorted(t2_list) == sorted(self_list)
 
     def is_bst_satisfied(self):
         '''
