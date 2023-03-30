@@ -137,7 +137,7 @@ class AVLTree(BST):
                 self.root = AVLTree._insert(self.root, x)
             else:
                 self.root = Node(x)
-                
+
     @staticmethod
     def _insert(node, value):
         if node is None:
